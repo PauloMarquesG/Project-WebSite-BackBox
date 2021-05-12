@@ -5,6 +5,7 @@
 
 	O objetivo desse trabalho era fazer uma apresentação de um sistema Linux em grupo
 	e para a apresentação o professor pediu para desenvolvermos um site usando HTML e CSS.
-	Ele pode não estar feito do melhor jeito, mas foi o meu primeiro projeto e tenho um carinho especial por ele.
+	Ele pode não estar feito do melhor jeito, mas foi o meu primeiro projeto e tenho um
+	carinho especial por ele.
 
 	Sinta-se livre para poder usar o código dele para seus projetos, obrigado pela atenção.

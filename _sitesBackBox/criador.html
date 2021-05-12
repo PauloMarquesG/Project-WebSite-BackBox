@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8"/>
+ <title>BackBox</title>
+  <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+
+<!-- Parallax -->
+
+<style>
+* {margin:0; padding: 0;}
+  html, body {height:100%;}
+  section { display: inline-block; } /*Para ajustar padrão do chrome*/
+  /** formata elementos que tem backgrounds parallax **/
+  .parallax {
+	font-family: 'tahoma', sans-serif;
+	color:#FFF;
+	margin: 0 auto;
+	width: 100%;		
+	position: relative;
+	max-height: 100%;
+	text-shadow:0 0 10px rgba(0,0,0,0.7);
+	background-position: 100% 0%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  }		 
+/* Define backgrounds dos divs */
+  #home {
+  	background-image: url(img1.jpg);
+  }
+  #portfolio {
+	background-image: url(imagens/img4.jpg);
+    /*-webkit-box-shadow:-20px 0 20px 5px #555;
+	-moz-box-shadow:-20px 0 20px 5px #555;
+	-ms-box-shadow:-20px 0 20px 5px #555;
+	-o-box-shadow:-20px 0 20px 5px #555;
+	box-shadow:-20px 0 20px 5px #555;*/
+  }	 
+/* Formata o article que vai o texto */
+  .parallax article {
+	width: 70%;
+	text-align: center;
+	margin:0 auto;
+  }
+  #home article { padding:20% 0 0; }
+  #portfolio article { padding:15% 0 0;}		 
+/** formata texto **/
+  article header { margin-bottom: 30px; }
+  article ul { list-style:none; padding: 0; margin: 0; }
+  article li { display: inline-block; }
+	</style>
+	<script>
+		$(function(){
+			$('.parallax').each(function(){
+				var $obj = $(this);
+				 
+				$(window).scroll(function() {
+					var yPos = -($(window).scrollTop() / $obj.data('speed'));			 
+					var bgpos = '50% '+ yPos + 'px';			 
+					$obj.css('background-position', bgpos );		 
+				});
+
+			});
+		});
+	</script>
+
+<!-- Fim Parallax -->
+<!-- logo versão-->
+
+ 	<script type="text/javascript">
+ 		function mudaFoto1(){
+ 			document.getElementById("mudalogo").src="_imagens/_logos/logopronto.png";
+ 		}
+ 		function mudaFoto2(){
+ 			document.getElementById("mudalogo").src="_imagens/_logos/logo.png";
+ 		}
+ 	</script>
+
+ <!-- fim logo versão -->
+ <!-- site backbox -->
+
+ 	<script type="text/javascript">
+ 		function mudaSite1(){
+ 			document.getElementById("mudasite").src="_imagens/_logos/backboxpronto.png";
+ 		}
+ 		function mudaSite2(){
+ 			document.getElementById("mudasite").src="_imagens/_logos/backbox.png";
+ 		}
+ 	</script>
+
+ <!-- fim site backbox -->
+  <!-- download backbox -->
+
+ 	<script type="text/javascript">
+ 		function mudaDown1(){
+ 			document.getElementById("mudapag").src="_imagens/_logos/downloadpronto.png";
+ 		}
+ 		function mudaDown2(){
+ 			document.getElementById("mudapag").src="_imagens/_logos/download.png";
+ 		}
+ 	</script>
+
+ <!-- fim download backbox -->
+</head>
+<body>
+	<div>
+  <header id="cabecalho">
+  	<div id="menu-fundo">
+    <nav id="menu1">
+      <ul>
+        <nav id="menu2">
+        <ul id="menu">
+          <li><a id="hed" href="index.html">Home</a></li>
+          <li><a id="hed2" href="ferramentas.html">Ferramentas</a></li>
+          <li><a id="hed3" href="entrevista.html">Entrevista</a></li>
+          <li><a id="hed4" href="agradecimentos.html">Agradecimentos</a></li>
+          <li><a id="hed5" href="criador.html">Criador</a></li>
+        </ul>
+      </nav>
+      </ul>
+    </nav>
+	</div>
+    <script>
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 0) {
+		    document.getElementById("menu-fundo").style.background = "rgba(255,255,255,.8)";
+		    document.getElementById("hed").style.color = "#1a8cff";
+		    document.getElementById("hed2").style.color = "#1a8cff";
+		    document.getElementById("hed3").style.color = "#1a8cff";
+		    document.getElementById("hed4").style.color = "#1a8cff";
+		    document.getElementById("hed5").style.color = "#1a8cff";
+		  } else {
+		    document.getElementById("menu-fundo").style.background = "transparent";
+		    document.getElementById("hed").style.color = "";
+		    document.getElementById("hed2").style.color = "";
+		    document.getElementById("hed3").style.color = "";
+		    document.getElementById("hed4").style.color = "";
+		    document.getElementById("hed5").style.color = "";
+		  }
+		}
+	</script>
+  </header>
+  <!-- Fim Cabeçalho -->
+	<div id="home" class="parallax" dataspeed="5s">
+		<section class="man"></section>
+	</div>
+	<div id="backbox">
+		<p>Back Box</p>
+	</div>
+		<div id="corpo">
+			<article id="pag_criador">
+				<h1>Criador do Linux</h1>
+				<h2>BackBox</h2>
+				<p>Raffaele Forte, da Universidade de Calábria, estudante de engenharia da computação e entusiasta de segurança, criou o projeto com ajuda de mais 9 pessoas, Gianfranco Costamagna, Stefan Umit Uygur, Andrea Draghetti, Cristian Mariolini, Nenad Marjanovic, Alessio Pascolini, Emilio Pinna, Enrico Cinquini, Vlad Butacu.</p>
+				<div id="divisoria">
+					<img src="_imagens/_pessoas/criador.jpg" id="c1">
+				</div>
+					<img src="_imagens/_pessoas/criador2.jpg" id="c2">
+			</article>
+		</div>
+	</article>
+	</div>
+<footer id="rodape">
+	<p>Copyright &copy; 2018 - by GrupoBackBoxTCC<br>
+		<a href="https://www.facebook.com/Backboxtcc/" target="_blank"><img src="_imagens/_logos/facebook.png"/>Facebook</a> | <a href="https://twitter.com/BackBox8" target="_blank"><img src="_imagens/_logos/twitter.png"/>Twitter</a></p>
+</footer>
+</div>	
+</body>
+</html>

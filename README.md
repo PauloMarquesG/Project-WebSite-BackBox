@@ -9,3 +9,6 @@
 	carinho especial por ele.
 
 	Sinta-se livre para poder usar o código dele para seus projetos, obrigado pela atenção.
+	
+	Abraços
+	:]

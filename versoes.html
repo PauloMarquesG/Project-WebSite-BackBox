@@ -1,167 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
- <meta charset="UTF-8"/>
- <title>BackBox</title>
-  <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BackBox</title>
+	<link rel="stylesheet" href="/_css/estilo.css">
+	<!-- BootStrap e Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/9ce8bbb405.js" crossorigin="anonymous"></script>
 
-<!-- Parallax -->
-
-<style>
-* {margin:0; padding: 0;}
-  html, body {height:100%;}
-  section { display: inline-block; } /*Para ajustar padrão do chrome*/
-  /** formata elementos que tem backgrounds parallax **/
-  .parallax {
-  font-family: 'tahoma', sans-serif;
-  color:#FFF;
-  margin: 0 auto;
-  width: 100%;    
-  position: relative;
-  max-height: 100%;
-  text-shadow:0 0 10px rgba(0,0,0,0.7);
-  background-position: 100% 0%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  }    
-/* Define backgrounds dos divs */
-  #home {
-    background-image: url(img1.jpg);
-  }
-  #portfolio {
-  background-image: url(imagens/img4.jpg);
-    /*-webkit-box-shadow:-20px 0 20px 5px #555;
-  -moz-box-shadow:-20px 0 20px 5px #555;
-  -ms-box-shadow:-20px 0 20px 5px #555;
-  -o-box-shadow:-20px 0 20px 5px #555;
-  box-shadow:-20px 0 20px 5px #555;*/
-  }  
-/* Formata o article que vai o texto */
-  .parallax article {
-  width: 70%;
-  text-align: center;
-  margin:0 auto;
-  }
-  #home article { padding:20% 0 0; }
-  #portfolio article { padding:15% 0 0;}     
-/** formata texto **/
-  article header { margin-bottom: 30px; }
-  article ul { list-style:none; padding: 0; margin: 0; }
-  article li { display: inline-block; }
-  </style>
-  <script>
-    $(function(){
-      $('.parallax').each(function(){
-        var $obj = $(this);
-         
-        $(window).scroll(function() {
-          var yPos = -($(window).scrollTop() / $obj.data('speed'));      
-          var bgpos = '50% '+ yPos + 'px';       
-          $obj.css('background-position', bgpos );     
-        });
-
-      });
-    });
-  </script>
-
-<!-- Fim Parallax -->
+	<!-- Script -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div>
-  <header id="cabecalho">
-    <div id="menu-fundo">
-    <nav id="menu1">
-      <ul>
-        <nav id="menu2">
-        <ul id="menu">
-          <li><a id="hed" href="index.html">Home</a></li>
-          <li><a id="hed2" href="ferramentas.html">Ferramentas</a></li>
-          <li><a id="hed3" href="entrevista.html">Entrevista</a></li>
-          <li><a id="hed4" href="agradecimentos.html">Agradecimentos</a></li>
-          <li><a id="hed5" href="criador.html">Criador</a></li>
-        </ul>
-      </nav>
-      </ul>
-    </nav>
-  </div>
-    <script>
-    window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 0) {
-        document.getElementById("menu-fundo").style.background = "rgba(255,255,255,.8)";
-        document.getElementById("hed").style.color = "#1a8cff";
-        document.getElementById("hed2").style.color = "#1a8cff";
-        document.getElementById("hed3").style.color = "#1a8cff";
-        document.getElementById("hed4").style.color = "#1a8cff";
-        document.getElementById("hed5").style.color = "#1a8cff";
-      } else {
-        document.getElementById("menu-fundo").style.background = "transparent";
-        document.getElementById("hed").style.color = "";
-        document.getElementById("hed2").style.color = "";
-        document.getElementById("hed3").style.color = "";
-        document.getElementById("hed4").style.color = "";
-        document.getElementById("hed5").style.color = "";
-      }
-    }
-  </script>
-  </header>
-  <!-- Fim Cabeçalho -->
-  <div id="home" class="parallax" dataspeed="5">
-  <section class="man"></section>
-  </div>
-    <div id="backbox">
-    <p>Back Box</p>
-  </div>
-  <section id="versoes">
-    <h1>Todas as verões do Linux BackBox</h1>
-  <h3>09/09/2010 – 1º lançamento:</h3> <p>BackBox Linux RC. É uma experiência de desktop completa, um uso simplificado dos recursos do sistema, tornando-o adequado em situações em que a velocidade é um fator crucial. O tema padrão mistura a elegância de um tema sombrio com a usabilidade de um tema leve.</p>
+	<!-- Começo Parallax -->
+	<div class="parallax"></div>
+	<section class="conteudo">
+		<h1 class="text-light">BACKBOX</h1>
+		<p class="text-light"><span>Versões do Linux</span></p>
+	</section>
+	<!-- Fim Parallax -->
 
-    <h3>03/01/2011 – 2º lançamento:</h3> <p>BackBox Linux 1. Esta nova versão inclui nova imagem ISO; atualização do sistema; aumento de desempenho; menu inicial melhorado; ferramentas de hacking novas e atualizadas; correção de bugs.</p>
+	<header>
+		<nav class="navbar navbar-dark fixed-top navbar-expand-lg">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">BackBox</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/ferramentas.html">Ferramentas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/entrevista.html">Entrevista</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/agradecimentos.html">Agradecimentos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/criador.html">Criador</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-    <h3>05/05/2011 – 3º lançamento:</h3> <p>BackBox Linux 1.5. Esta nova versão inclui atualização do sistema; correção de bugs.</p>
+	<main id="versoes">
+    <div class="container py-5">
+      <div class="row">
+        <h1>Versões do Linux BackBox</h1>
+        <div class="col rounded shadow-lg bg-dark text-light p-3">
 
-    <h3>04/09/2011 – 4º lançamento:</h3> <p>BackBox Linux 2, contém algumas das melhores e mais usadas ferramentas de hacking. BackBox 2 apresenta os seguintes componentes: Ubuntu 11.04, Kernel Linux 2.6.38 e Xfce 4.8.0. Vem com um bom desempenho, aparência, ferramentas de hacking; três seções: avaliação de vulnerabilidade, análise forense e análise VoIP. Requisitos do sistema: processador de 32 ou 64 bits, 256 MB de memória do sistema (RAM), 2 GB de espaço em disco para instalação, placa gráfica Resolução 800x600, unidade de DVD-ROM ou porta USB.</p>
+          <h3>09/09/2010 – 1º lançamento:</h3> <p>BackBox Linux RC. É uma experiência de desktop completa, um uso simplificado dos recursos do sistema, tornando-o adequado em situações em que a velocidade é um fator crucial. O tema padrão mistura a elegância de um tema sombrio com a usabilidade de um tema leve.</p>
+          <h3>03/01/2011 – 2º lançamento:</h3> <p>BackBox Linux 1. Esta nova versão inclui nova imagem ISO; atualização do sistema; aumento de desempenho; menu inicial melhorado; ferramentas de hacking novas e atualizadas; correção de bugs.</p>
+          <h3>05/05/2011 – 3º lançamento:</h3> <p>BackBox Linux 1.5. Esta nova versão inclui atualização do sistema; correção de bugs.</p>
+          <h3>04/09/2011 – 4º lançamento:</h3> <p>BackBox Linux 2, contém algumas das melhores e mais usadas ferramentas de hacking. BackBox 2 apresenta os seguintes componentes: Ubuntu 11.04, Kernel Linux 2.6.38 e Xfce 4.8.0. Vem com um bom desempenho, aparência, ferramentas de hacking; três seções: avaliação de vulnerabilidade, análise forense e análise VoIP. Requisitos do sistema: processador de 32 ou 64 bits, 256 MB de memória do sistema (RAM), 2 GB de espaço em disco para instalação, placa gráfica Resolução 800x600, unidade de DVD-ROM ou porta USB.</p>
+          <h3>02/01/2012 – 5º lançamento:</h3> <p>BackBox Linux 2.01. O novo lançamento inclui recursos como Ubuntu 11.04, Kernel Linux 2.6.38 e Xfce 4.8.0. O que há de novo: atualização do sistema; aumento de desempenho; nova aparência; menu de inicialização aprimorado; correções de bugs; novas seções como Análise Forense; Documentação e Relatórios e Engenharia Reversa; novas ferramentas de hacking; ferramentas atualizadas.</p>
+          <h3>26/04/2012 – 6º lançamento:</h3> <p>BackBox Linux 2.05. Ainda com a mesma versão, têm atualização do sistema; correções de bugs; aumento de desempenho; menu inicial melhorado; driver de WiFi aprimorado; novas ferramentas de hackers. Requisito novo do sistema: 4,4 GB de espaço em disco para instalação.</p>
+          <h3>24/10/2012 – 7º lançamento:</h3> <p>BackBox Linux 3.0. O novo lançamento inclui recursos como o Kernel Linux 3.2 e Xfce 4.8. Além da atualização principal do sistema, todas as ferramentas de auditoria também estão atualizadas. O que há de novo: atualização do sistema; correções de bugs; aumento de desempenho; menu de inicialização aprimorado; drivers Wi-Fi aprimorados. Requisito novo do sistema: 512 MB de memória do sistema.</p>
+          <h3>23/01/2013 – 8º lançamento:</h3> <p>BackBox Linux 3.01. O que há de novo? Melhorias do sistema; componentes a montante; correções de bugs; aumento de desempenho; melhor menu de auditoria; drivers de Wi-Fi aprimorados (Aircrack compat-wireless corrigido); ferramentas de hacking novas e atualizadas.</p>
+          <h3>22/05/2013 – 9º lançamento:</h3> <p>BackBox Linux 3.05. Esta versão inclui um recurso, compat-wireless 3.8 (com patch Aircrack-ng). O que há de novo? Melhorias do sistema; correções de bugs nos componentes upstream; aumento de desempenho; melhorado menu Update; melhorado dirvers Wi-Fi; suporte completo para o kernel Linux 3.5 e 3.8; predisposição para a arquitetura ARM; ferramentas de hacking novas e atualizadas.</p>
+          <h3>20/09/2013 – 10º lançamento:</h3> <p>BackBox Linux 3.09. Esta versão inclui recursos como o Kernel Linux 3.8, modo EFI, modo anônimo e pacotes Debian armhf. O que há de novo: melhorias no sistema; componentes a montante; correções de bugs; aumento de desempenho; melhorado menu Update; melhor menu forense; novo modo anônimo (proxy transparente Tor); removeu o compat-wireless 3.8 pré-instalado com o patch Aircrack-NG; novas e atualizadas ferramentas de hacking.</p>
+          <h3>16/01/2014 – 11º lançamento:</h3> <p>BackBox Linux 3.13. O que há de novo: Kernel pré-instalado 3.11; melhorias no sistema; componentes upstream; correções de bugs; aumento de desempenho; melhorado menu Update; melhorado menu forense; predisposição para a plataforma BackBox Cloud; ferramentas de hacking novas e atualizadas. </p>
+          <h3>11/10/2014 – 12º lançamento:</h3> <p>BackBox Linux 4.0. Inclui recursos como Kernel Linux 3.13, instalador de criptografia de disco LVM +, adições de privacidade e pacotes armhf do Debian Novidades Base Ubuntu 14.04, ações customizadas Thunar customizadas, limpeza RAM no desligamento e reinicialização, melhorias no sistema; componentes upstream; correções de bugs; aumento de performance; modo anônimo melhorado; predisposição para arquitetura ARM; novas e atualizadas ferramentas de hacking.</p>
+          <h3>29/01/2015 – 13º lançamento:</h3> <p>BackBox Linux 4.1. O lançamento inclui nova base Ubuntu 14.04.1; melhorias do sistema; correções de bugs; aumento de desempenho; melhorou o modo anónimo; novas e atualizadas ferramentas de hacking.</p>
+          <h3>27/04/2015 – 14º lançamento:</h3> <p>BackBox Linux 4.2. Esta versão inclui recursos como o Linux Kernel 3.16 e Ruby 2.1. O que há de novo: nova base do Ubuntu 14.04.2; instalador com opções de criptografia de disco completo e LVM; ações personalizadas de Thunar; melhorias no sistema; componentes a montante; correções de bugs; aumento de desempenho; novas e atualizadas ferramentas de hacking.</p>
+          <h3>22/07/2015 – 15º lançamento:</h3> <p>BackBox Linux 4.3. O que há de novo: instalador com opções de criptografia de disco completo e LVM; melhorias no sistema; correções de bugs; aumento de desempenho; ferramentas de hacking novas e atualizadas.</p>
+          <h3>12/10/2015 – 16º lançamento:</h3> <p>BackBox Linux 4.4. Esta versão inclui novos recursos especiais incluídos para manter o BackBox atualizado com os últimos desenvolvimentos no mundo da segurança. Ferramentas como OpenVAS e Automotive Analysis O BackBox 4.4 vem também com o kernel Linux 3.19; novo Ubuntu 14.04.3 base; instalador com opções de criptografia LVM e full disk; reboot.</p>
+          <h3>27/01/2016 – 17º lançamento:</h3> <p>BackBox Linux 4.5. O que há de novo: Kernel 4.2; melhorias do sistema; correções de bugs; aumento de desempenho; novas e atualizadas ferramentas de hacking.</p>
+          <h3>27/05/2016 – 18º lançamento:</h3> <p>BackBox Linux 4.6. Nesta versão corrigiram alguns pequenos bugs, configuraram o Ruby 2.2 como o Ruby padrão; atualizaram o sistema básico e as ferramentas. O que há de novo: ferramentas de hacking atualizadas - Beef, dirsearch, Metasploit, OpenVAS, SE Toolkit, Volatilidade, WPScan, wxHexEditor e YARA. Requisitos do sistema: processador de 32 bits ou 64 bits; 512 MB de memória do sistema (RAM); 10 GB de espaço em disco para instalação; Cartão fraphics com resolução de 800 × 600; Unidade de DVD-ROM ou porta USB (3 GB).</p>
+          <h3>06/12/2016 – 19º lançamento:</h3> <p>BackBox Linux 4.7. Esta versão inclui atualizações da pilha do kernel, sistema básico e ferramentas de hackers atualizadas. </p>
+          <h3>21/07/2017 - 20º lançamento:</h3> <p>BackBox Linux 5.0. O que há de novo: Novo logotipo e identidade; atualização do kernel Linux 4.8; atualizou todas as ferramentas de hacking. Requisitos do sistema: processador de 32 bits ou 64 bits; 1.024 MB de memória do sistema (RAM).</p>
+          <h3>09/08/2018 – 21º lançamento:</h3> <p>BackBox Linux 5.2. O que há de novo: Kernel atualizado 4.15; ferramentas de hacking atualizadas; híbrido ISO Requisitos do sistema: Processador de 32 bits ou 64 bits; 1,024 MB de memória do sistema (RAM); 10 GB de espaço em disco para instalação; placa gráfica capaz de resolução de 800 x 600; Unidade de DVD-ROM ou porta USB (3 GB).</p>
 
+        </div>
+      </div>
+    </div>
+	</main>
 
-    <h3>02/01/2012 – 5º lançamento:</h3> <p>BackBox Linux 2.01. O novo lançamento inclui recursos como Ubuntu 11.04, Kernel Linux 2.6.38 e Xfce 4.8.0. O que há de novo: atualização do sistema; aumento de desempenho; nova aparência; menu de inicialização aprimorado; correções de bugs; novas seções como Análise Forense; Documentação e Relatórios e Engenharia Reversa; novas ferramentas de hacking; ferramentas atualizadas.</p>
+	<footer class="bg-dark p-3">
+		<div class="text-center text-muted pb-3">
+		    <i class="bi bi-c-circle"></i> Copyright 2018-2022. by - Paulo Marques Gonçalves
+		</div>
+	</footer>
 
-    <h3>26/04/2012 – 6º lançamento:</h3> <p>BackBox Linux 2.05. Ainda com a mesma versão, têm atualização do sistema; correções de bugs; aumento de desempenho; menu inicial melhorado; driver de WiFi aprimorado; novas ferramentas de hackers. Requisito novo do sistema: 4,4 GB de espaço em disco para instalação.</p>
-
-    <h3>24/10/2012 – 7º lançamento:</h3> <p>BackBox Linux 3.0. O novo lançamento inclui recursos como o Kernel Linux 3.2 e Xfce 4.8. Além da atualização principal do sistema, todas as ferramentas de auditoria também estão atualizadas. O que há de novo: atualização do sistema; correções de bugs; aumento de desempenho; menu de inicialização aprimorado; drivers Wi-Fi aprimorados. Requisito novo do sistema: 512 MB de memória do sistema.</p>
-
-    <h3>23/01/2013 – 8º lançamento:</h3> <p>BackBox Linux 3.01. O que há de novo? Melhorias do sistema; componentes a montante; correções de bugs; aumento de desempenho; melhor menu de auditoria; drivers de Wi-Fi aprimorados (Aircrack compat-wireless corrigido); ferramentas de hacking novas e atualizadas.</p>
-
-    <h3>22/05/2013 – 9º lançamento:</h3> <p>BackBox Linux 3.05. Esta versão inclui um recurso, compat-wireless 3.8 (com patch Aircrack-ng). O que há de novo? Melhorias do sistema; correções de bugs nos componentes upstream; aumento de desempenho; melhorado menu Update; melhorado dirvers Wi-Fi; suporte completo para o kernel Linux 3.5 e 3.8; predisposição para a arquitetura ARM; ferramentas de hacking novas e atualizadas.</p>
-
-    <h3>20/09/2013 – 10º lançamento:</h3> <p>BackBox Linux 3.09. Esta versão inclui recursos como o Kernel Linux 3.8, modo EFI, modo anônimo e pacotes Debian armhf. O que há de novo: melhorias no sistema; componentes a montante; correções de bugs; aumento de desempenho; melhorado menu Update; melhor menu forense; novo modo anônimo (proxy transparente Tor); removeu o compat-wireless 3.8 pré-instalado com o patch Aircrack-NG; novas e atualizadas ferramentas de hacking.</p>
-
-    <h3>16/01/2014 – 11º lançamento:</h3> <p>BackBox Linux 3.13. O que há de novo: Kernel pré-instalado 3.11; melhorias no sistema; componentes upstream; correções de bugs; aumento de desempenho; melhorado menu Update; melhorado menu forense; predisposição para a plataforma BackBox Cloud; ferramentas de hacking novas e atualizadas. </p>
-
-    <h3>11/10/2014 – 12º lançamento:</h3> <p>BackBox Linux 4.0. Inclui recursos como Kernel Linux 3.13, instalador de criptografia de disco LVM +, adições de privacidade e pacotes armhf do Debian Novidades Base Ubuntu 14.04, ações customizadas Thunar customizadas, limpeza RAM no desligamento e reinicialização, melhorias no sistema; componentes upstream; correções de bugs; aumento de performance; modo anônimo melhorado; predisposição para arquitetura ARM; novas e atualizadas ferramentas de hacking.</p>
-
-    <h3>29/01/2015 – 13º lançamento:</h3> <p>BackBox Linux 4.1. O lançamento inclui nova base Ubuntu 14.04.1; melhorias do sistema; correções de bugs; aumento de desempenho; melhorou o modo anónimo; novas e atualizadas ferramentas de hacking.</p>
-
-    <h3>27/04/2015 – 14º lançamento:</h3> <p>BackBox Linux 4.2. Esta versão inclui recursos como o Linux Kernel 3.16 e Ruby 2.1. O que há de novo: nova base do Ubuntu 14.04.2; instalador com opções de criptografia de disco completo e LVM; ações personalizadas de Thunar; melhorias no sistema; componentes a montante; correções de bugs; aumento de desempenho; novas e atualizadas ferramentas de hacking.</p>
-
-    <h3>22/07/2015 – 15º lançamento:</h3> <p>BackBox Linux 4.3. O que há de novo: instalador com opções de criptografia de disco completo e LVM; melhorias no sistema; correções de bugs; aumento de desempenho; ferramentas de hacking novas e atualizadas.</p>
-
-    <h3>12/10/2015 – 16º lançamento:</h3> <p>BackBox Linux 4.4. Esta versão inclui novos recursos especiais incluídos para manter o BackBox atualizado com os últimos desenvolvimentos no mundo da segurança. Ferramentas como OpenVAS e Automotive Analysis O BackBox 4.4 vem também com o kernel Linux 3.19; novo Ubuntu 14.04.3 base; instalador com opções de criptografia LVM e full disk; reboot.</p>
-
-    <h3>27/01/2016 – 17º lançamento:</h3> <p>BackBox Linux 4.5. O que há de novo: Kernel 4.2; melhorias do sistema; correções de bugs; aumento de desempenho; novas e atualizadas ferramentas de hacking.</p>
-
-    <h3>27/05/2016 – 18º lançamento:</h3> <p>BackBox Linux 4.6. Nesta versão corrigiram alguns pequenos bugs, configuraram o Ruby 2.2 como o Ruby padrão; atualizaram o sistema básico e as ferramentas. O que há de novo: ferramentas de hacking atualizadas - Beef, dirsearch, Metasploit, OpenVAS, SE Toolkit, Volatilidade, WPScan, wxHexEditor e YARA. Requisitos do sistema: processador de 32 bits ou 64 bits; 512 MB de memória do sistema (RAM); 10 GB de espaço em disco para instalação; Cartão fraphics com resolução de 800 × 600; Unidade de DVD-ROM ou porta USB (3 GB).</p>
-
-    <h3>06/12/2016 – 19º lançamento:</h3> <p>BackBox Linux 4.7. Esta versão inclui atualizações da pilha do kernel, sistema básico e ferramentas de hackers atualizadas. </p>
-
-    <h3>21/07/2017 - 20º lançamento:</h3> <p>BackBox Linux 5.0. O que há de novo: Novo logotipo e identidade; atualização do kernel Linux 4.8; atualizou todas as ferramentas de hacking. Requisitos do sistema: processador de 32 bits ou 64 bits; 1.024 MB de memória do sistema (RAM).</p>
-
-    <h3>09/08/2018 – 21º lançamento:</h3> <p>BackBox Linux 5.2. O que há de novo: Kernel atualizado 4.15; ferramentas de hacking atualizadas; híbrido ISO Requisitos do sistema: Processador de 32 bits ou 64 bits; 1,024 MB de memória do sistema (RAM); 10 GB de espaço em disco para instalação; placa gráfica capaz de resolução de 800 x 600; Unidade de DVD-ROM ou porta USB (3 GB).</p>
-  </section>
-<footer id="rodape">
-  <p>Copyright &copy; 2018 - by GrupoBackBoxTCC<br>
-    <a href="https://www.facebook.com/Backboxtcc/" target="_blank"><img src="_imagens/_logos/facebook.png"/>Facebook</a> | <a href="https://twitter.com/BackBox8" target="_blank"><img src="_imagens/_logos/twitter.png"/>Twitter</a></p>
-</footer>
-</div>  
+	<!-- SCRIPT -->
+	<script src="/_js/script.js"></script>
 </body>
 </html>

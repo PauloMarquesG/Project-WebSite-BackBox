@@ -1,166 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
- <meta charset="UTF-8"/>
- <title>BackBox</title>
-  <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BackBox</title>
+	<link rel="stylesheet" href="/_css/estilo.css">
+	<!-- BootStrap e Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/9ce8bbb405.js" crossorigin="anonymous"></script>
 
-<!-- Parallax -->
-
-<style>
-* {margin:0; padding: 0;}
-  html, body {height:100%;}
-  section { display: inline-block; } /*Para ajustar padrão do chrome*/
-  /** formata elementos que tem backgrounds parallax **/
-  .parallax {
-	font-family: 'tahoma', sans-serif;
-	color:#FFF;
-	margin: 0 auto;
-	width: 100%;		
-	position: relative;
-	max-height: 100%;
-	text-shadow:0 0 10px rgba(0,0,0,0.7);
-	background-position: 100% 0%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-  }		 
-/* Define backgrounds dos divs */
-  #home {
-  	background-image: url(img1.jpg);
-  }
-  #portfolio {
-	background-image: url(imagens/img4.jpg);
-    /*-webkit-box-shadow:-20px 0 20px 5px #555;
-	-moz-box-shadow:-20px 0 20px 5px #555;
-	-ms-box-shadow:-20px 0 20px 5px #555;
-	-o-box-shadow:-20px 0 20px 5px #555;
-	box-shadow:-20px 0 20px 5px #555;*/
-  }	 
-/* Formata o article que vai o texto */
-  .parallax article {
-	width: 70%;
-	text-align: center;
-	margin:0 auto;
-  }
-  #home article { padding:20% 0 0; }
-  #portfolio article { padding:15% 0 0;}		 
-/** formata texto **/
-  article header { margin-bottom: 30px; }
-  article ul { list-style:none; padding: 0; margin: 0; }
-  article li { display: inline-block; }
-	</style>
-	<script>
-		$(function(){
-			$('.parallax').each(function(){
-				var $obj = $(this);
-				 
-				$(window).scroll(function() {
-					var yPos = -($(window).scrollTop() / $obj.data('speed'));			 
-					var bgpos = '50% '+ yPos + 'px';			 
-					$obj.css('background-position', bgpos );		 
-				});
-
-			});
-		});
-	</script>
-
-<!-- Fim Parallax -->
+	<!-- Script -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div>
-   <header id="cabecalho">
-  	<div id="menu-fundo">
-    <nav id="menu1">
-      <ul>
-        <nav id="menu2">
-        <ul id="menu">
-          <li><a id="hed" href="index.html">Home</a></li>
-          <li><a id="hed2" href="ferramentas.html">Ferramentas</a></li>
-          <li><a id="hed3" href="entrevista.html">Entrevista</a></li>
-          <li><a id="hed4" href="agradecimentos.html">Agradecimentos</a></li>
-          <li><a id="hed5" href="criador.html">Criador</a></li>
-        </ul>
-      </nav>
-      </ul>
-    </nav>
-	</div>
-    <script>
-		window.onscroll = function() {scrollFunction()};
 
-		function scrollFunction() {
-		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 0) {
-		    document.getElementById("menu-fundo").style.background = "rgba(255,255,255,.8)";
-		    document.getElementById("hed").style.color = "#1a8cff";
-		    document.getElementById("hed2").style.color = "#1a8cff";
-		    document.getElementById("hed3").style.color = "#1a8cff";
-		    document.getElementById("hed4").style.color = "#1a8cff";
-		    document.getElementById("hed5").style.color = "#1a8cff";
-		  } else {
-		    document.getElementById("menu-fundo").style.background = "transparent";
-		    document.getElementById("hed").style.color = "";
-		    document.getElementById("hed2").style.color = "";
-		    document.getElementById("hed3").style.color = "";
-		    document.getElementById("hed4").style.color = "";
-		    document.getElementById("hed5").style.color = "";
-		  }
-		}
-	</script>
-  </header>
-  <!-- Fim Cabeçalho -->
-	<div id="home" class="parallax" dataspeed="5">
-		<section class="man"></section>
-	</div>
-		<div id="backbox">
-		<p>Back Box</p>
-	</div>
-<div id="corpo">
-<div id="ferramentas">
-	<h1>Ferramentas</h1>
-	<h5>Metasploit</h5><p>Conhecimento é poder, especialmente quando é compartilhado. Uma colaboração entre a comunidade de código aberto e o Rapid7, o Metasploit ajuda as equipes de segurança a fazer mais do que apenas verificar vulnerabilidades, gerenciar avaliações de segurança e melhorar a conscientização de segurança; ele capacita e arma defensores para sempre ficar um passo (ou dois) à frente do jogo.</p>
-	<img src="_imagens/_ferramentas/metasploit.png" id="img1">
+	<!-- Começo Parallax -->
+	<div class="parallax"></div>
+	<section class="conteudo">
+		<h1 class="text-light">BACKBOX</h1>
+		<p class="text-light"><span>Ferramentas</span></p>
+	</section>
+	<!-- Fim Parallax -->
 
-	<h5>Armitage</h5><p>É uma ferramenta gráfica de gerenciamento de ataques cibernéticos para o Projeto Metasploit que visualiza alvos e recomenda explorações. É uma ferramenta de segurança de rede gratuita e de código aberto notável por suas contribuições para a colaboração em equipe, permitindo: sessões compartilhadas, dados e comunicação através de uma única instância do Metasploit.</p>
-	<img src="_imagens/_ferramentas/armitage.png" id="img2">
+	<header>
+		<nav class="navbar navbar-dark fixed-top navbar-expand-lg">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">BackBox</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#ferramentas">Ferramentas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/entrevista.html">Entrevista</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/agradecimentos.html">Agradecimentos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/criador.html">Criador</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-	<h5>Nmap</h5><p>É um software livre que realiza port scan desenvolvido pelo Gordon Lyon, autoproclamado hacker "Fyodor". É muito utilizado para avaliar a segurança dos computadores, e para descobrir serviços ou servidores em uma rede de computadores.</p>
-	<img src="_imagens/_ferramentas/nmap.png" id="img3">
+	<main id="ferramentas">
+		<div class="container py-5">
+			<h1>Ferramentas</h1><hr>
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/metasploit.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Metasploit</h5>
+					  		<p class="card-text">Conhecimento é poder, especialmente quando é compartilhado. Uma colaboração entre a comunidade de código aberto e o Rapid7, o Metasploit ajuda as equipes de segurança a fazer mais do que apenas verificar vulnerabilidades, gerenciar avaliações de segurança e melhorar a conscientização de segurança; ele capacita e arma defensores para sempre ficar um passo (ou dois) à frente do jogo.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/armitage.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Armitage</h5>
+					  		<p class="card-text">É uma ferramenta gráfica de gerenciamento de ataques cibernéticos para o Projeto Metasploit que visualiza alvos e recomenda explorações. É uma ferramenta de segurança de rede gratuita e de código aberto notável por suas contribuições para a colaboração em equipe, permitindo: sessões compartilhadas, dados e comunicação através de uma única instância do Metasploit.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/nmap.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Nmap</h5>
+					  		<p class="card-text">É um software livre que realiza port scan desenvolvido pelo Gordon Lyon, autoproclamado hacker "Fyodor". É muito utilizado para avaliar a segurança dos computadores, e para descobrir serviços ou servidores em uma rede de computadores.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/openvas.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">OpenVAS</h5>
+					  		<p class="card-text">É uma estrutura de vários serviços e ferramentas que oferece uma solução abrangente e poderosa de varredura de vulnerabilidades e gerenciamento de vulnerabilidades. O framework faz parte da solução de gerenciamento de vulnerabilidade comercial da Greenbone Networks , a partir da qual os desenvolvimentos são contribuídos para a comunidade Open Source desde 2009.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/w3af.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">W3af</h5>
+					  		<p class="card-text">É um ataque de aplicativo da Web e estrutura de auditoria . O objetivo do projeto é criar uma estrutura para ajudá-lo a proteger seus aplicativos da Web encontrando e explorando todas as vulnerabilidades de aplicativos da web.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/ettercap.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Ettercap</h5>
+					  		<p class="card-text">É um conjunto abrangente para o homem nos ataques do meio. Ele apresenta sniffing de conexões ao vivo, filtragem de conteúdo em tempo real e muitos outros truques interessantes. Suporta a dissecação ativa e passiva de muitos protocolos e inclui muitos recursos para análise de rede e host.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/scapy.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Scapy</h5>
+					  		<p class="card-text">É um poderoso programa interativo de manipulação de pacotes. Ele é capaz de forjar ou decodificar pacotes de um grande número de protocolos, enviá-los na rede, capturá-los, corresponder solicitações e respostas e muito mais. Ele pode facilmente lidar com tarefas mais clássicas como varredura, tracerouting, sondagem, testes de unidade, ataques ou descoberta de rede.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/wireshark.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Wireshark</h5>
+					  		<p class="card-text">É o analisador de protocolo de rede mais utilizado e amplamente utilizado no mundo. Ele permite que você veja o que está acontecendo em sua rede em um nível microscópico e é o padrão de fato em muitas empresas comerciais e sem fins lucrativos, agências governamentais e instituições educacionais.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/kismet.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Kismet</h5>
+					  		<p class="card-text">É um analisador de rede sniffer, e um sistema de detecção de intrusão para redes 802.11 wireless. Kismet pode trabalhar com as placas wireless no modo monitor, capturando pacotes em rede dos tipos: 802.11a, 802.11b e 802.11g. Funciona com os sistemas operecionais Linux, FreeBSD, NetBSD, OpenBSD, and Mac OS X. Existe um cliente para Windows, porem é necessário usar um servidor externo.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/aircrack-ng.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Aircrack</h5>
+					  		<p class="card-text">É um conjunto completo de ferramentas para avaliar a segurança da rede WiFi. Ele se concentra em diferentes áreas de segurança WiFi: Monitoramento Ataque Teste Craqueamento.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/ophcrack.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Ophcrack</h5>
+					  		<p class="card-text">É um cracker de senha livre do Windows baseado em tabelas de arco-íris. É uma implementação muito eficiente de tabelas de arco-íris feita pelos inventores do método. Ele vem com uma interface gráfica do usuário e é executado em várias plataformas.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/sqlmap.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">Sqlmap</h5>
+					  		<p class="card-text">É uma ferramenta de teste de penetração de software livre que automatiza o processo de detecção e exploração de falhas de injeção de SQL e a invasão de servidores de banco de dados. Ele vem com um poderoso mecanismo de detecção, muitos recursos para o testador de penetração e uma ampla variedade de switches que duram desde a impressão digital do banco de dados até a busca de dados do banco de dados até o acesso ao sistema de arquivos subjacente e a execução de comandos no sistema operacional.</p>
+						</div>
+				  	</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="/assets/_imagens/_ferramentas/john.png" class="card-img-top" alt="...">
+						<div class="card-body">
+					  		<h5 class="card-title">John the Ripper</h5>
+					  		<p class="card-text">É um software para quebra de senhas. O John the Ripper possui três modos de operação:Dicionário (Wordlist);Quebra Simples (Single Crack);Incremental;Externo (External).</p>
+						</div>
+				  	</div>
+				</div>
+			</div>	
+		</div>
+	</main>
 
-	<h5>OpenVAS</h5><p>É uma estrutura de vários serviços e ferramentas que oferece uma solução abrangente e poderosa de varredura de vulnerabilidades e gerenciamento de vulnerabilidades. O framework faz parte da solução de gerenciamento de vulnerabilidade comercial da Greenbone Networks , a partir da qual os desenvolvimentos são contribuídos para a comunidade Open Source desde 2009.</p>
-	<img src="_imagens/_ferramentas/openvas.png" id="img4">
-	
-	<h5>W3af</h5><p>É um ataque de aplicativo da Web e estrutura de auditoria . O objetivo do projeto é criar uma estrutura para ajudá-lo a proteger seus aplicativos da Web encontrando e explorando todas as vulnerabilidades de aplicativos da web.</p>
-	<img src="_imagens/_ferramentas/w3af.png" id="img5">
+	<footer class="bg-dark p-3">
+		<div class="text-center text-muted pb-3">
+		    <i class="bi bi-c-circle"></i> Copyright 2018-2022. by - Paulo Marques Gonçalves
+		</div>
+	</footer>
 
-	<h5>Ettercap</h5><p>É um conjunto abrangente para o homem nos ataques do meio. Ele apresenta sniffing de conexões ao vivo, filtragem de conteúdo em tempo real e muitos outros truques interessantes. Suporta a dissecação ativa e passiva de muitos protocolos e inclui muitos recursos para análise de rede e host.</p>
-	<img src="_imagens/_ferramentas/ettercap.png" id="img6">
-
-	<h5>Scapy</h5><p>É um poderoso programa interativo de manipulação de pacotes. Ele é capaz de forjar ou decodificar pacotes de um grande número de protocolos, enviá-los na rede, capturá-los, corresponder solicitações e respostas e muito mais. Ele pode facilmente lidar com tarefas mais clássicas como varredura, tracerouting, sondagem, testes de unidade, ataques ou descoberta de rede.</p>
-	<img src="_imagens/_ferramentas/scapy.png" id="img7">
-
-	<h5>Wireshark</h5><p>É o analisador de protocolo de rede mais utilizado e amplamente utilizado no mundo. Ele permite que você veja o que está acontecendo em sua rede em um nível microscópico e é o padrão de fato em muitas empresas comerciais e sem fins lucrativos, agências governamentais e instituições educacionais.</p>
-	<img src="_imagens/_ferramentas/wireshark.png" id="img8">
-	
-	<h5>Kismet</h5><p>É um analisador de rede sniffer, e um sistema de detecção de intrusão para redes 802.11 wireless. Kismet pode trabalhar com as placas wireless no modo monitor, capturando pacotes em rede dos tipos: 802.11a, 802.11b e 802.11g. Funciona com os sistemas operecionais Linux, FreeBSD, NetBSD, OpenBSD, and Mac OS X. Existe um cliente para Windows, porem é necessário usar um servidor externo.</p>
-	<img src="_imagens/_ferramentas/kismet.png" id="img9">
-
-	<h5>Aircrack</h5><p>É um conjunto completo de ferramentas para avaliar a segurança da rede WiFi. Ele se concentra em diferentes áreas de segurança WiFi: Monitoramento Ataque Teste Craqueamento.</p>
-	<img src="_imagens/_ferramentas/aircrack-ng.png" id="img10">
-
-	<h5>Ophcrack</h5><p>É um cracker de senha livre do Windows baseado em tabelas de arco-íris. É uma implementação muito eficiente de tabelas de arco-íris feita pelos inventores do método. Ele vem com uma interface gráfica do usuário e é executado em várias plataformas.</p>
-	<img src="_imagens/_ferramentas/ophcrack.png" id="img11">	
-
-	<h5>Sqlmap</h5><p>É uma ferramenta de teste de penetração de software livre que automatiza o processo de detecção e exploração de falhas de injeção de SQL e a invasão de servidores de banco de dados. Ele vem com um poderoso mecanismo de detecção, muitos recursos para o testador de penetração e uma ampla variedade de switches que duram desde a impressão digital do banco de dados até a busca de dados do banco de dados até o acesso ao sistema de arquivos subjacente e a execução de comandos no sistema operacional.</p>
-	<img src="_imagens/_ferramentas/sqlmap.png" id="img12">	
-
-	<h5>John the Ripper</h5><p>É um software para quebra de senhas. O John the Ripper possui três modos de operação:Dicionário (Wordlist);Quebra Simples (Single Crack);Incremental;Externo (External).</p>
-	<img src="_imagens/_ferramentas/john.png" id="img13">
-
-</div>
-</div>
-<footer id="rodape">
-	<p>Copyright &copy; 2018 - by GrupoBackBoxTCC<br>
-		<a href="https://www.facebook.com/Backboxtcc/" target="_blank"><img src="_imagens/_logos/facebook.png"/>Facebook</a> | <a href="https://twitter.com/BackBox8" target="_blank"><img src="_imagens/_logos/twitter.png"/>Twitter</a></p>
-</footer>
-</div>	
+	<!-- SCRIPT -->
+	<script src="/_js/script.js"></script>
 </body>
 </html>

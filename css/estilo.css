@@ -4,7 +4,7 @@
 .parallax {
 	height: 100vh;
 	background-image: url('../assets/imagens/parallax.svg');
-	background-position: center;
+	background-position: right;
 	background-size: cover;
 	background-attachment: fixed;
 }

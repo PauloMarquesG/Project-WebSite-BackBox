@@ -1,18 +1,43 @@
-# Site BackBox
- 
-Olá, esse é o meu primeiro site que desenvolvi para um trabalho acadêmico na ETEC São Mateus no meu primeiro ano.
+# Site Linux BackBox
 
-O objetivo desse trabalho era fazer uma apresentação de um sistema Linux em grupo e para a apresentação o professor pediu para desenvolvermos um site usando HTML e CSS.
-Ele pode não estar feito do melhor jeito, mas foi o meu primeiro projeto e tenho um carinho especial por ele.
+# Índice
+- [Site Linux BackBox](#site-linux-backbox)
+- [Índice](#índice)
+- [Sobre](#sobre)
+- [Instalação e Utilização](#instalação-e-utilização)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [License](#license)
 
-Sinta-se livre para poder usar o código dele para seus projetos, obrigado pela atenção.
+# Sobre
 
-Abraços 
-:]
+Este é o meu primeiro projeto de site que desenvolvi enquanto estudava na ETEC São Mateus durante o meu segundo ano. O objetivo era criar uma apresentação em grupo sobre o sistema Linux. Para isso, o professor solicitou que fizéssemos um site utilizando HTML 5, CSS 3 e JavaScript. Foi minha primeira experiência com desenvolvimento web e tenho um carinho especial por ele.
 
-<img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> | 
-<img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+Com o tempo, adicionei a biblioteca BootStrap para garantir a responsividade no site em diferentes dispositivos. Sinta-se livre para clonar o projeto e adaptar
+para seus projetos pessoais ou profissionais.
+Teve uma ideia de como melhorar o código? Me manda uma mensagem e vamos conversar.
 
----
-**Author:** Paulo Marques Gonçalves (Paulinhn)</br>
-**Data:**
+This is my first website project that I developed while studying at ETEC São Mateus during my second year. The objective was to create a group presentation about the Linux system. For this, the professor requested that we make a website using HTML 5, CSS 3, and JavaScript. It was my first experience with web development and I have a special fondness for it.
+
+Over time, I added the BootStrap library to ensure the website's responsiveness on different devices. Feel free to clone the project and adapt it for your personal or professional projects. Have an idea on how to improve the code? Send me a message and let's talk.
+
+# Instalação e Utilização
+
+```bash
+git clone https://github.com/PauloMarquesG/Project-WebSite-BackBox.git
+```
+
+GitHub Pages: https://paulomarquesg.github.io/Project-WebSite-BackBox/
+
+# Tecnologias Utilizadas
+- `HTML 5`
+- `CSS 3`
+- `BootStrap 5`
+- `JavaScript`
+
+# License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<hr>
+
+<a href="https://github.com/PauloMarquesG" style="color:gray;text-decoration:none;">&copy; Copyright 2019-2023. by - Paulo Marques Gonçalves :]</a>

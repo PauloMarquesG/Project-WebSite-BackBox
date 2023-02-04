@@ -1,5 +1,7 @@
 # Site Linux BackBox
 
+![Imagem do Site do Linux BackBox](assets/foto-backbox.png)
+
 # Índice
 - [Site Linux BackBox](#site-linux-backbox)
 - [Índice](#índice)
